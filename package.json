@@ -1,0 +1,24 @@
+{
+  "name": "prince-ify",
+  "version": "1.0.0",
+  "description": "machine learning LSTM neural net using prince song lyrics as training data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ben-marcantel/prince-ify.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ben-marcantel/prince-ify/issues"
+  },
+  "homepage": "https://github.com/ben-marcantel/prince-ify#readme",
+  "dependencies": {
+    "brain.js": "^1.2.0",
+    "browserify": "^16.2.0"
+  }
+}
