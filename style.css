@@ -1,0 +1,25 @@
+body{
+    color:plum;
+    background-color: black;
+    font-family: "futura";
+}
+input[type="text"]{
+    background-color: rgb(0, 0, 0);
+    color:plum;
+    border: 2px solid plum;
+}
+input[type="submit"]{
+    background-color: rgb(0, 0, 0);
+    color:plum;    
+    border: 2px solid plum;
+    
+}
+input[type="text"]:hover {
+    background-color: plum;
+    color:white;
+    
+}
+input[type="submit"]:hover {
+    background-color: plum;
+    color:white;
+}
