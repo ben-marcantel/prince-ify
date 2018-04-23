@@ -1,13 +1,8 @@
+const brain = require('brain.js');
 let input = document.getElementById("input");
 let output = document.getElementById("output");
 const button = document.getElementById("button");
 let userInput;
-const brain = require('brain.js');
-
-
-
-
-
 const trainingData = [
     'I never meant to cause you any sorrow',
   'I never meant to cause you any pain',
@@ -39,20 +34,17 @@ const trainingData = [
   "Touch if you will my stomach",
   "When doves cry",
   "Even doves have pride",
-
-
 ];
 
 const lstm = new brain.recurrent.LSTM();
+const result = lstm.train(trainingData, { iterations: 1500 });
 
 
 const getInput = ()=>{
     userInput = input.value;
-    console.log(userInput);
 }
 
 const getOutput = ()=>{
-    const result = lstm.train(trainingData, { iterations: 1500 });
     const run1 = lstm.run(userInput);
     output.innerHTML = run1    
 }

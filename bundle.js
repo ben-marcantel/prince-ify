@@ -1,14 +1,9 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+const brain = require('brain.js');
 let input = document.getElementById("input");
 let output = document.getElementById("output");
 const button = document.getElementById("button");
 let userInput;
-const brain = require('brain.js');
-
-
-
-
-
 const trainingData = [
     'I never meant to cause you any sorrow',
   'I never meant to cause you any pain',
@@ -40,20 +35,17 @@ const trainingData = [
   "Touch if you will my stomach",
   "When doves cry",
   "Even doves have pride",
-
-
 ];
 
 const lstm = new brain.recurrent.LSTM();
+const result = lstm.train(trainingData, { iterations: 1500 });
 
 
 const getInput = ()=>{
     userInput = input.value;
-    console.log(userInput);
 }
 
 const getOutput = ()=>{
-    const result = lstm.train(trainingData, { iterations: 1500 });
     const run1 = lstm.run(userInput);
     output.innerHTML = run1    
 }
